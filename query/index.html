@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Socket.IO chat</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font: 13px Helvetica, Arial;
+    }
+    
+    form {
+      background: #000;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    form input {
+      border: 0;
+      padding: 10px;
+      width: 90%;
+      margin-right: .5%;
+    }
+    
+    form button {
+      width: 9%;
+      background: rgb(130, 224, 255);
+      border: none;
+      padding: 10px;
+    }
+    
+    #messages {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #messages li {
+      padding: 5px 10px;
+    }
+    
+    #messages li:nth-child(odd) {
+      background: #eee;
+    }
+  </style>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+
+<body>
+  
+  <ul id="messages"></ul>
+  <form action="">
+    <input id="m" autocomplete="off"  />
+    <select id="tinh">
+        <option value="mien-bac">Miền bắc</option>
+        <option value="an-giang">An Giang</option>
+        <option value="bac-lieu">Bạc Liêu</option>
+        <option value="ben-tre">Bến Tre</option>
+        <option value="binh-dinh">Bình Định</option>
+        <option value="binh-duong">Bình Dương</option>
+        <option value="binh-phuoc">Bình Phước</option>
+        <option value="binh-thuan">Bình Thuận</option>
+        <option value="ca-mau">Cà Mau</option>
+        <option value="can-tho">Cần Thơ</option>
+        <option value="da-lat">Đà Lạt</option>
+        <option value="da-nang">Đà Nẵng</option>
+        <option value="dak-lak">Đắk Lắk</option>
+        <option value="dak-nong">Đắk Nông</option>
+        <option value="dong-nai">Đồng Nai</option>
+        <option value="dong-thap">Đồng Tháp</option>
+        <option value="gia-lai">Gia Lai</option>
+        <option value="hau-giang">Hậu Giang</option>
+        <option value="khanh-hoa">Khánh Hòa</option>
+        <option value="kien-giang">Kiên Giang</option>
+        <option value="kon-tum">Kon Tum</option>
+        <option value="long-an">Long An</option>
+        <option value="ninh-thuan">Ninh Thuận</option>
+        <option value="phu-yen">Phú Yên</option>
+        <option value="quang-binh">Quảng Bình</option>
+        <option value="quang-nam">Quảng Nam</option>
+        <option value="quang-ngai">Quảng Ngãi</option>
+        <option value="quang-tri">Quảng Trị</option>
+        <option value="soc-trang">Sóc Trăng</option>
+        <option value="tay-ninh">Tây Ninh</option>
+        <option value="thua-thien-hue">Thừa T. Huế</option>
+        <option value="tien-giang">Tiền Giang</option>
+        <option value="tp-hcm">TP. HCM</option>
+        <option value="tra-vinh">Trà Vinh</option>
+        <option value="vinh-long">Vĩnh Long</option>
+        <option value="vung-tau">Vũng Tàu</option>
+    </select>
+    <button>Send</button>
+  </form>
+  <script src="builder.js"></script>
+</body>
+
+</html>
